@@ -30,6 +30,7 @@ this one adds deep **Cassandra** knowledge to every conversation.
 | **Self-healing & Repairs** | Hinted handoff, read repair, anti-entropy repair with Merkle trees, incremental repair, and Cassandra Reaper. |
 | **LWT & Transactions** | LWT cost (~4× round-trips, Paxos), hot-partition contention traps, and Cassandra 6 Accord full ACID transactions. |
 | **Operations & Administration** | Cluster setup checklist, compaction strategy selection, repair scheduling, failure-diagnosis table, pre-flight schema checklist, and extended nodetool command reference. |
+| **Health Checks & Monitoring** | Five-step live health snapshot, metric thresholds, incident triage flow, JMX cheat sheet (latency/errors/compaction/hints/GC), and minimum dashboard panel set. |
 
 
 ---
@@ -49,7 +50,12 @@ command needed. You can also invoke it explicitly with:
 
 ```
 .bob/skills/cassandra/
-  SKILL.md      ← skill instructions loaded by Bob at activation
+  SKILL.md          ← skill instructions loaded by Bob at activation
+  architecture.md   ← deployment options, masterless, gossip, CAP, consistency
+  data-modeling.md  ← four-step process, partition health, patterns, tombstones, SAI
+  cql.md            ← query writing, optimisation checklist, anti-patterns, snippets
+  operations.md     ← storage engine, compaction, repairs, cluster setup, nodetool ref
+  health-check.md   ← health snapshot, metric thresholds, triage flow, hints diagnosis
 ```
 
 ---
@@ -92,8 +98,19 @@ command needed. You can also invoke it explicitly with:
 - Failure diagnosis table covering read/write timeouts, node-down, tombstone warnings, hot partitions, and `ALLOW FILTERING` in production.
 - Pre-flight schema checklist (partition scope, unbounded growth, RF/CL alignment, tombstone/LWT risk).
 
+### Health Checks & Monitoring
+- Five-step live health snapshot (membership → thread pools → gossip → storage/OS → logs).
+- Metric thresholds table (steady-state vs incident) for latency, GC, disk, compaction, hints, and repair.
+- Incident triage flow: availability → latency → write issues → read timeouts → inconsistency risk.
+- JMX metric cheat sheet: client latency/errors, thread pools, compaction, JVM/GC, hints, per-table hot spots.
+- Minimum Grafana/dashboard panel set for production monitoring.
+
 ### References
-- Content informed by [cassandra-fundamentals](https://github.com/michelderu/cassandra-fundamentals) — an open-source Cassandra architecture and data-modelling course.
+
+Content informed by these open-source Cassandra learning resources:
+
+- [**cassandra-fundamentals**](https://github.com/michelderu/cassandra-fundamentals) — architecture and data-modelling course covering masterless topology, CAP/consistency, storage engine, and query-driven schema design.
+- [**cassandra-health-check**](https://github.com/michelderu/cassandra-health-check) — operational health-check guide covering live snapshots, JMX metrics, incident triage, hints diagnosis, and dashboard references.
 
 ---
 
