@@ -1,17 +1,27 @@
-# Cassandra — Bob Skill
+# IBM Bob Skill: Cassandra
 
 A Bob skill that turns any conversation about Apache Cassandra into an expert-guided session.
 It covers the three core areas of Cassandra work: schema design, CQL queries, and cluster operations.
 
 ---
 
-## What it does
+## About Bob
+
+[Bob](https://bob.ibm.com/) is an AI-powered developer assistant by IBM for the full **SDLC**. Skills extend Bob with domain-specific expertise —
+this one adds deep **Cassandra** knowledge to every conversation.
+
+![why-ibm-bob](./assets/why-ibm-bob.png)
+
+---
+
+## About the Skill
 
 | Area | What you get |
 |---|---|
 | **Schema & Data Modelling** | Query-driven design workflow — elicits access patterns, recommends partition keys and clustering columns, validates against common pitfalls, and outputs annotated `CREATE TABLE` CQL. |
 | **CQL Query Writing & Optimisation** | Writes and optimises SELECT / INSERT / UPDATE / DELETE / BATCH statements, runs a 6-point optimisation checklist, and calls out anti-patterns like full-table scans and `ALLOW FILTERING`. |
 | **Operations & Administration** | Cluster setup checklist, compaction strategy selection (STCS / LCS / TWCS), repair scheduling guidance, failure-diagnosis table, and a nodetool command reference. |
+
 
 ---
 
@@ -64,5 +74,5 @@ command needed. You can also invoke it explicitly with:
 
 ## Scope
 
-This skill is **workspace-scoped** when stored  in your project directory `.bob/skills/cassandra/`.
+This skill is **workspace-scoped** when stored  in your project directory [`.bob/skills/cassandra/`](.bob/skills/cassandra/).
 To make it global, move the directory to `~/.bob/skills/cassandra/`.

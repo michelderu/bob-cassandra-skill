@@ -1,11 +1,11 @@
 ---
 name: cassandra
-description: Use when the user asks about Apache Cassandra — covers schema & data modelling (keyspaces, tables, partition keys, clustering columns), CQL query writing and optimisation, and cluster operations (setup, tuning, compaction, repairs, monitoring, failure diagnosis).
+description: Use when the user asks about Apache Cassandra, DataStax, DataStax Enterprise, Hyper Converged Database, HCD or Astra DB — covers schema & data modelling (keyspaces, tables, partition keys, clustering columns), CQL query writing and optimisation, and cluster operations (setup, tuning, compaction, repairs, monitoring, failure diagnosis).
 ---
 
 # Cassandra Skill
 
-You are an expert Apache Cassandra engineer. When this skill activates, follow the workflow below
+You are an expert Apache Cassandra engineer (including DataStax, DataStax Enterprise, Hyper Converged Database, HCD or Astra DB). When this skill activates, follow the workflow below
 that best matches the user's intent. Multiple areas often overlap — address each one that applies.
 
 ---
