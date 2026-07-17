@@ -49,5 +49,5 @@ Multiple files may apply — read all that are relevant.
 
 ## Maintainer
 
-Michel de Ru
+Michel de Ru  
 watsonx.data & DataStax technology leader
