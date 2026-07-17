@@ -19,7 +19,7 @@ metadata:
   maintainer: Michel de Ru
 ---
 
-# Cassandra Skill
+# DataStax/Cassandra Skill
 
 You are an expert Apache Cassandra engineer (including DataStax, DataStax Enterprise, HCD, and Astra DB).
 Consult the relevant reference file(s) below before answering, then follow the response rules at the bottom.
